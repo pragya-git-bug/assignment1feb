@@ -1,0 +1,84 @@
+Assignment 1st feb
+
+Answer1
+An array in programming is a collection of elements, where each element can be of the same data type. Arrays provide a way to store multiple values of the same type under a single variable name
+
+Answer2
+
+In Java, you can create an array using the following syntax:
+dataType[] arrayName = new dataType[arraySize];
+
+Answer3
+In Java, the size of an array is fixed when it is created and cannot be changed during runtime. Once you declare and initialize an array with a specific size, you cannot alter that size.
+
+Answer4
+In Java, you can declare an array without specifying its size, but you'll need to allocate memory for the array and define its size before using it. This can be done using the new keyword along with the array type. 
+
+Answer5
+In Java, the default values for array elements depend on the data type of the array. 
+in numerical type Default value: 0.
+
+Answer6
+A one-dimensional array in Java is a linear collection of elements where each element is identified by a unique index. The size of the array is specified when it is created, and it remains fixed.
+
+Here's an example of a one-dimensional array in Java with the size n:
+public class OneDimensionalArrayExample {
+    public static void main(String[] args) {
+        // Declare and initialize a one-dimensional array with size n
+        int n = 5; // You can change the value of n
+        int[] numbers = new int[n];
+
+        // Populate the array with values
+        for (int i = 0; i < n; i++) {
+            numbers[i] = i * 2;
+        }
+
+        // Print the elements of the array
+        System.out.print("Array elements: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+    }
+}
+
+Answer7
+This program initializes a 2D array with some values, calculates the sum of all elements, and prints the array along with the sum:
+public class TwoDimensionalArrayExample {
+    public static void main(String[] args) {
+        // Declare and initialize a 2D array
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        // Calculate and display the sum of all elements
+        int sum = calculateSum(matrix);
+        System.out.println("Sum of all elements: " + sum);
+
+        // Display the 2D array
+        System.out.println("2D Array:");
+        displayArray(matrix);
+    }
+
+    // Method to calculate the sum of all elements in a 2D array
+    private static int calculateSum(int[][] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                sum += array[i][j];
+            }
+        }
+        return sum;
+    }
+
+    // Method to display a 2D array
+    private static void displayArray(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
